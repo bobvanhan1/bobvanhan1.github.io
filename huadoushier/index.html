@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都十二钗小说-都市言情精品连载与阅读指南</title>
+    <meta name="description" content="花都十二钗小说在线阅读平台，提供都市言情题材小说的免费阅读、章节目录、人物介绍及阅读心得分享。收录热门都市情感故事，更新及时，阅读体验流畅。">
+    <meta name="keywords" content="花都十二钗小说,都市小说,言情小说,在线阅读,章节目录">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d4a373;
+            --primary-dark: #b08255;
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-main: #2c2c2c;
+            --text-secondary: #666666;
+            --border-color: #e5e5e5;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-left: 8px;
+            color: var(--text-main);
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-dark);
+        }
+
+        .search-box {
+            display: flex;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            border: none;
+            padding: 8px 12px;
+            outline: none;
+            font-size: 14px;
+            width: 180px;
+        }
+
+        .search-box button {
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            padding: 0 12px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbf7 0%, #f3e7e9 100%);
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(212, 163, 115, 0.15);
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        /* Main Layout */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 32px auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 32px;
+        }
+
+        /* Book Info Card */
+        .book-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .book-cover-area {
+            position: relative;
+            width: 100%;
+            padding-top: 140%; /* Aspect Ratio */
+            background-color: #eee;
+        }
+
+        .book-cover-area img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-info {
+            padding: 24px;
+        }
+
+        .book-title {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .book-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .book-intro {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Chapter List */
+        .chapter-section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            padding: 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-list li:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-list a {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .chapter-list a:hover {
+            color: var(--primary-dark);
+        }
+
+        .chapter-date {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            padding: 20px;
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            padding-left: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .rank-list li:nth-child(1) { color: #ff4d4f; font-weight: bold; }
+        .rank-list li:nth-child(2) { color: #ff7a45; font-weight: bold; }
+        .rank-list li:nth-child(3) { color: #ffa940; font-weight: bold; }
+
+        .rank-num {
+            width: 20px;
+            margin-right: 8px;
+            text-align: center;
+        }
+
+        .rank-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
+        }
+
+        /* Reading Area */
+        .reader-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            padding: 40px;
+            margin-top: 32px;
+            margin-bottom: 60px;
+        }
+
+        .reader-title {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .reader-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+
+        .reader-content p {
+            margin-bottom: 1em;
+        }
+
+        .reader-footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #999;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 16px 0;
+                gap: 16px;
+            }
+            
+            nav ul {
+                gap: 16px;
+                font-size: 14px;
+            }
+
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                display: none; /* Simplify for mobile */
+            }
+
+            .reader-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="#" class="logo">阅文阁<span>小说阅读</span></a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">书架</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索书名或作者...">
+            <button>搜索</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>花都十二钗小说</h1>
+        <p>都市情感巅峰之作，讲述现代都市中的爱恨纠葛与风云变幻。</p>
+        <div class="tags">
+            <span class="tag">都市</span>
+            <span class="tag">言情</span>
+            <span class="tag">职场</span>
+            <span class="tag">热血</span>
+        </div>
+    </div>
+</section>
+
+<main class="main-container">
+    <!-- Left Column: Book Info & Chapters -->
+    <div class="content-area">
+        <!-- Book Card -->
+        <article class="book-card">
+            <div class="book-cover-area">
+                <img src="https://picsum.photos/seed/novel12/800/600" alt="花都十二钗小说封面">
+            </div>
+            <div class="book-info">
+                <h2 class="book-title">花都十二钗</h2>
+                <div class="book-meta">
+                    <span>作者：[佚名]</span>
+                    <span>类型：都市言情</span>
+                    <span>状态：连载中</span>
+                    <span>字数：128万字</span>
+                </div>
+                <p class="book-intro">
+                    在繁华的“花都”都市背后，隐藏着无数不为人知的故事。本书以独特的视角切入现代都市生活，描绘了十二位性格迥异、命运交织的女性形象。她们在商海沉浮中挣扎，在情感漩涡里抉择，共同谱写了一曲关于成长、背叛与救赎的都市史诗。这不仅是一部女性视角的群像剧，更是一部探讨现代人际关系与自我价值的深度小说。
+                </p>
+                <div class="action-buttons">
+                    <a href="#chapter-list" class="btn btn-primary">立即阅读</a>
+                    <a href="#" class="btn btn-outline">加入书架</a>
+                    <a href="#" class="btn btn-outline">分享</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Reader Area (Simulated Chapter Content) -->
+        <div id="chapter-list" class="reader-container">
+            <h3 class="reader-title">第一章：初入花都</h3>
+            <div class="reader-content">
+                <p>秋风萧瑟，卷起满地落叶。李明站在机场的出口，望着眼前车水马龙、高楼林立的景象，心中不禁涌起一股复杂的滋味。这就是他奋斗了五年终于换来的“花都”。</p>
+                <p>“李先生，您的车到了。”司机恭敬地递上一份行程单。李明接过单子，轻轻点了点头。虽然身处陌生的大都市，但他眼神中的坚定并未减少半分。这一次回来，他不仅要立足，更要证明自己。</p>
+                <p>花都的夜色总是来得特别早。霓虹灯初上，将这座不夜城装点得光怪陆离。李明坐在后座，透过车窗看着窗外飞速后退的街景，思绪飘回到了五年前。</p>
+                <p>那时的他还是个一无所有的穷小子，带着对未来的憧憬和一点积蓄，毅然踏上了前往花都的列车。这一路走来，酸甜苦辣，只有自己知道。如今，他已是业内小有名气的策划总监，但这仅仅是开始。</p>
+                <p>车子缓缓驶入市中心的一处高档公寓区。这里环境清幽，安保严密，是许多都市精英的栖息地。李明下了车，站在自家公寓的落地窗前，俯瞰着整个城市的灯火。</p>
+                <p>“花都十二钗，究竟会是谁呢？”李明喃喃自语，嘴角勾起一抹意味深长的笑容。他知道，在这个城市里，等待他的不仅仅是机遇，还有那些即将相遇的、注定不平凡的人。</p>
+            </div>
+            <div class="reader-footer">
+                <p>—— 完 ——</p>
+                <div class="action-buttons" style="justify-content: center; margin-top: 20px;">
+                    <button class="btn btn-primary" style="width: 100%;">上一章</button>
+                    <button class="btn btn-primary" style="width: 100%;">下一章</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Chapters List -->
+        <div class="chapter-section">
+            <h3 class="section-title">章节目录</h3>
+            <ul class="chapter-list">
+                <li><a href="#">第一章：初入花都</a><span class="chapter-date">10-24</span></li>
+                <li><a href="#">第二章：意外的相遇</a><span class="chapter-date">10-23</span></li>
+                <li><a href="#">第三章：职场风云起</a><span class="chapter-date">10-22</span></li>
+                <li><a href="#">第四章：神秘的邀约</a><span class="chapter-date">10-21</span></li>
+                <li><a href="#">第五章：旧友重逢</a><span class="chapter-date">10-20</span></li>
+                <li><a href="#">第六章：暗流涌动</a><span class="chapter-date">10-19</span></li>
+                <li><a href="#">第七章：转折点</a><span class="chapter-date">10-18</span></li>
+                <li><a href="#">第八章：新的开始</a><span class="chapter-date">10-17</span></li>
+            </ul>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-outline" style="font-size: 14px; padding: 8px 20px;">加载更多章节</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column: Sidebar -->
+    <aside class="sidebar">
+        <!-- Author Info -->
+        <div class="sidebar-widget">
+            <h4 class="widget-title">作者简介</h4>
+            <p style="font-size: 14px; color: #666; margin-bottom: 12px;">笔耕不辍，专注于都市情感题材创作，擅长刻画细腻的人物内心世界。</p>
+            <a href="#" style="font-size: 13px; color: var(--primary-dark);">查看作者主页 &rarr;</a>
+        </div>
+
+        <!-- Hot Books -->
+        <div class="sidebar-widget">
+            <h4 class="widget-title">热门推荐</h4>
+            <ul class="rank-list">
+                <li><span class="rank-num">1</span><span class="rank-title">绝世高手在都市</span></li>
+                <li><span class="rank-num">2</span><span class="rank-title">赘婿逆袭记</span></li>
+                <li><span class="rank-num">3</span><span class="rank-title">都市之最强战神</span></li>
+                <li><span class="rank-num">4</span><span class="rank-title">神级医圣</span></li>
+                <li><span class="rank-num">5</span><span class="rank-title">豪门弃女</span></li>
+            </ul>
+        </div>
+
+        <!-- Ad Placeholder -->
+        <div class="sidebar-widget" style="background-color: #f5f5f5; min-height: 250px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">
+            广告位
+        </div>
+
+        <!-- Tags Cloud -->
+        <div class="sidebar-widget">
+            <h4 class="widget-title">标签</h4>
+            <div class="tags">
+                <a href="#" class="tag">都市</a>
+                <a href="#" class="tag">爱情</a>
+                <a href="#" class="tag">职场</a>
+                <a href="#" class="tag">商战</a>
+                <a href="#" class="tag">逆袭</a>
+                <a href="#" class="tag">治愈</a>
+            </div>
+        </div>
+    </aside>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">投稿指南</a>
+            <a href="#">版权声明</a>
+            <a href="#">用户协议</a>
+            <a href="#">联系客服</a>
+        </div>
+        <p class="copyright">Copyright © 2023 阅文阁小说阅读平台. All Rights Reserved.</p>
+        <p class="copyright" style="margin-top: 8px; font-size: 12px; color: #666;">本站内容均为用户上传，仅供学习交流，请勿用于商业用途。</p>
+    </div>
+</footer>
+
+</body>
+</html>
